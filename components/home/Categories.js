@@ -3,27 +3,27 @@ import {View,Text,Image, ScrollView} from "react-native"
 
 const items=[
     {
-        image:require("../assets/images/pickup.png"),
+        image:require("../../assets/images/pickup.png"),
         text:"Pick-up",
     },
     {
-        image:require("../assets/images/drink.jpg"),
+        image:require("../../assets/images/drink.jpg"),
         text:"Soft Drinks",
     },
     {
-        image:require("../assets/images/bakery.png"),
+        image:require("../../assets/images/bakery.png"),
         text:"Bakery Items",
     },
     {
-        image:require("../assets/images/fastfood.jpg"),
+        image:require("../../assets/images/fastfood.jpg"),
         text:"Fast Foods",
     },
     {
-        image:require("../assets/images/deals.jpg"),
+        image:require("../../assets/images/deals.jpg"),
         text:"Deals",
     },
     {
-        image:require("../assets/images/desserts.png"),
+        image:require("../../assets/images/desserts.png"),
         text:"Desserts",
     },
 ]

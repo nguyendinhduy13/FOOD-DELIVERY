@@ -1,10 +1,11 @@
 import React, { useState,useEffect } from "react";
 import { View, Text, SafeAreaView, ScrollView } from "react-native"
-import HeaderTabs from "../components/HeaderTabs";
-import SearchBar from "../components/SearchBar";
-import Categories from "../components/Categories";
-import RestaurantItem, { localrestaurants, } from "../components/RestaurantItem";
-
+import HeaderTabs from "../components/home/HeaderTabs";
+import SearchBar from "../components/home/SearchBar";
+import Categories from "../components/home/Categories";
+import RestaurantItem, { localrestaurants, } from "../components/home/RestaurantItem";
+import BottomTabs from "../components/home/BottomTabs";
+import { Divider } from "react-native-elements/dist/divider/Divider";
 const VELP_API_KEY = "bPWTQO3-pfAzOs88rtspTS15JbydPENtb3VuXVAgJmzU-AcoFeW7RDmtoVJPLtEfFX3ibxU7aPVuDcdCq5IV1NTdIz2YI5l75BOyqu1xZ3y-fjpNZcUVcnIweVn6YnYx"
 
 export default function Home() {
@@ -38,6 +39,8 @@ return (
             <Categories />
             <RestaurantItem restaurantdata={restaurantdata} />
         </ScrollView>
+        <Divider width={1}/>
+        <BottomTabs/>
     </SafeAreaView>
 )
 }

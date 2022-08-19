@@ -7,20 +7,26 @@ const yelpRestaurantInfo={
     price:"$$",
     review:1500,
     rating:4.5,
-    categories:[{title:"Thai"},{title:"Comfort Food"}],
+    categories:[
+        {title:"Thai"},
+        {title:"Comfort Food"},
+        {title:"Coffee"},
+        {title:"Ice Cream"},
+        {title:"Snacks"}
+    ],
 };
 
-const {name,image,price,reviews,rating,categories}=yelpRestaurantInfo;
+export default function About(props) {
+    const {name,image,price,review,rating,categories}=props.route.params;
 
 const formattedCategories=categories.map(category=>category.title).join(" • ");
 
 const description=`${formattedCategories} ${price ? " • " + price : ""}`;
 
-export default function About() {
     return (
         <View>
             <RestaurantImage image={image} />
-            <RestaurantTitle title={title} />
+            <RestaurantName title={name} />
             <RestaurantDescription description={description} />
         </View>
     )
@@ -33,7 +39,7 @@ const RestaurantImage = (props) => (
     />
 )
 
-const RestaurantTitle = (props) => (
+const RestaurantName = (props) => (
     <Text
         style={{
             fontSize: 23,

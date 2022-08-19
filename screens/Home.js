@@ -8,7 +8,7 @@ import BottomTabs from "../components/home/BottomTabs";
 import { Divider } from "react-native-elements/dist/divider/Divider";
 const VELP_API_KEY = "bPWTQO3-pfAzOs88rtspTS15JbydPENtb3VuXVAgJmzU-AcoFeW7RDmtoVJPLtEfFX3ibxU7aPVuDcdCq5IV1NTdIz2YI5l75BOyqu1xZ3y-fjpNZcUVcnIweVn6YnYx"
 
-export default function Home() {
+export default function Home({navigation}) {
     const [restaurantdata, setRestaurantdata] = useState([localrestaurants]);
     const [city,setcity]=useState("San Francisco")
     const [activeTab,setActiveTab]=useState("Delivery")
@@ -37,7 +37,7 @@ return (
         </View>
         <ScrollView showsVerticalScrollIndicator={false}>
             <Categories />
-            <RestaurantItem restaurantdata={restaurantdata} />
+            <RestaurantItem restaurantdata={restaurantdata} navigation={navigation}/>
         </ScrollView>
         <Divider width={1}/>
         <BottomTabs/>
